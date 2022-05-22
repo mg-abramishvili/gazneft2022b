@@ -139,6 +139,9 @@ export default {
             }
         }
     },
+    mounted() {
+        document.oncontextmenu = new Function("return false;")
+    },
     methods: {
         selectPage(page) {
             if(this.selected.page == page) {
@@ -180,7 +183,7 @@ html, body {
         user-select: none;
         -webkit-touch-callout: none;
         -khtml-user-select: none;
-        /* cursor: none; */
+        cursor: none;
     }
     .wrapper {
         position: relative;
